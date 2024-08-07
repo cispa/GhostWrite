@@ -1,5 +1,3 @@
-# GhostWrite
-
 ![Logo of GhostWrite](ghostwrite.svg)
 
 GhostWrite is a security vulnerability that affects the T-Head XuanTie C910, one of the fastest RISC-V chips to date.
