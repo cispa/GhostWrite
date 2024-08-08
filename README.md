@@ -28,7 +28,27 @@ gcc -march="rv64gvzve64x" ghostwrite.c -o ghostwrite
 The Makefile is configured to produce a statically linked binary (using a cross-compiler).
 Simply execute `make`.
 
-#### Nix-based building environment
+### Running
+
+Run the PoC with root privileges, so that it can setup a mapping to physical memory for observing a write with GhostWrite:
+``` sh
+sudo ./ghostwrite
+```
+
+Expected output:
+```
+Virtual address:        3fbd3e8000
+Phyiscal address:         89f46000
+
+Value before:                 caaa
+Value after:                  cafe
+```
+
+The output should contain valid virtual and physical addresses.
+Further, the value after executing GhostWrite with the physical address as target should change.
+If the values stay the same, i.e., you see "caaa" twice, or the application crashes, the CPU is not affected.
+
+### Nix-based building environment
 
 We further ship a Nix flakes based building environment.
 Install [Nix](https://nixos.org/download/) on your system and [enable flakes](https://nixos.wiki/wiki/Flakes).
