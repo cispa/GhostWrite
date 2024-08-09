@@ -38,7 +38,7 @@ sudo ./ghostwrite
 Expected output:
 ```
 Virtual address:        3fbd3e8000
-Phyiscal address:         89f46000
+Physical address:         89f46000
 
 Value before:                 caaa
 Value after:                  cafe

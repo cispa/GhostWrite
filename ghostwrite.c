@@ -48,7 +48,7 @@ int main() {
     uint64_t phys = get_physical_address(virt);
 
     printf("Virtual address:  %16lx\n", virt);
-    printf("Phyiscal address: %16lx\n\n", phys);
+    printf("Physical address: %16lx\n\n", phys);
 
     printf("Value before:     %16lx\n", *target);
 
